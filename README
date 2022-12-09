@@ -1,0 +1,50 @@
+This README file contains information on the contents of the meta-weston-rdp layer.
+
+Please see the corresponding sections below for details.
+
+Dependencies
+============
+
+  URI: <first dependency>
+  branch: <branch name>
+
+  URI: <second dependency>
+  branch: <branch name>
+
+  .
+  .
+  .
+
+Patches
+=======
+
+Please submit any patches against the meta-rauc-raspberrypi layer via GitHub pull request on https://github.com/leon-anavi/meta-weston-rdp.
+
+Maintainer: Leon Anavi <leon.anavi@konsulko.com>
+
+Table of Contents
+=================
+
+  I. Adding the meta-weston-rdp layer to your build
+ II. Misc
+
+
+I. Adding the meta-weston-rdp layer to your build
+=================================================
+
+Run 'bitbake-layers add-layer meta-weston-rdp'
+
+II. Misc
+========
+
+From another computer in the same network connect to the embedded
+device using a Remote Desktop Protocol (RDP) client:
+
+* For Wayland:
+
+wlfreerdp /v:<ip>
+
+* For X11:
+
+xfreerdp /v:<ip>
+
