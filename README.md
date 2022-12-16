@@ -32,7 +32,7 @@ Table of Contents
 I. Adding the meta-weston-rdp layer to your build
 =================================================
 
-Run 'bitbake-layers add-layer meta-weston-rdp'
+Run `bitbake-layers add-layer meta-weston-rdp`
 
 II. Misc
 ========
