@@ -42,9 +42,33 @@ device using a Remote Desktop Protocol (RDP) client:
 
 * For Wayland:
 
+```
 wlfreerdp /v:<ip>
+```
 
 * For X11:
 
+```
 xfreerdp /v:<ip>
+```
+
+* On the target device generate RDP certificates:
+
+```
+winpr-makecert -rdp -path $PWD
+```
+
+* Enable automatic starup of RDP screen sharing in `weston.ini`, for example add:
+
+```
+[screen-share]
+command=/usr/bin/weston --backend=rdp-backend.so --rdp-tls-cert=/etc/freerdp/keys/server.crt --rdp-tls-key=/etc/freerdp/keys/server.key --shell=fullscreen-shell.so --no-clients-resize
+start-on-startup=true
+```
+
+* Launch weston with `screen-share.so`, for example in Weston systemd service:
+
+```
+ExecStart=/usr/bin/weston --modules=systemd-notify.so,screen-share.so --log=/var/log/weston.log
+```
 
