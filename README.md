@@ -58,7 +58,7 @@ xfreerdp /v:<ip>
 winpr-makecert -rdp -path $PWD
 ```
 
-* Enable automatic starup of RDP screen sharing in `weston.ini`, for example add:
+* Enable automatic startup of RDP screen sharing in `weston.ini`, for example add:
 
 ```
 [screen-share]
